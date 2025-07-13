@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Ascendant Force of Nigerian Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .stat-card h3 {
+            color: #F1C40F;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF5733, #FF33A1, #3357FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .flow-arrow {
+            color: #F1C40F;
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">The <span class="gradient-text">Ascendant Force</span></h1>
+            <h2 class="text-2xl md:text-4xl font-semibold text-slate-300">Nigeria's Fashion Renaissance</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-slate-400">
+                A new wave of Nigerian designers is shaping the global fashion narrative, blending rich heritage with contemporary aesthetics and a powerful commitment to sustainability.
+            </p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="overview" class="p-8 bg-slate-800 rounded-2xl shadow-2xl">
+                <h2 class="text-3xl font-bold text-center mb-8">The Anatomy of a Movement</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="chart-container">
+                        <canvas id="categoryDistributionChart"></canvas>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-semibold mb-4 text-amber-400">A Diverse & Dynamic Landscape</h3>
+                        <p class="text-slate-300 mb-4">
+                            The 40 rising brands analyzed reveal a strong industry leaning towards specialized niches. Sustainable and Conscious creation forms the largest segment, highlighting a deep commitment to ethical practices. This is closely followed by the vibrant Streetwear scene and the growing Ready-to-Wear market, showcasing the industry's diversification.
+                        </p>
+                        <p class="text-slate-400 text-sm">
+                            This donut chart illustrates the composition of rising talent, pointing to key areas of growth and innovation within Nigeria's fashion ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sustainability">
+                <h2 class="text-3xl font-bold text-center mb-8">Pioneering Sustainable & Ethical Production</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="stat-card p-6 bg-slate-800 rounded-2xl shadow-xl">
+                        <h3 class="text-6xl font-bold">90%</h3>
+                        <p class="mt-2 font-semibold">Waste Repurposing</p>
+                        <p class="mt-2 text-sm text-slate-400">Brand 'Hertunba' leads by example, transforming nearly all textile excesses into new art and decor, drastically reducing landfill waste.</p>
+                    </div>
+                    <div class="stat-card p-6 bg-slate-800 rounded-2xl shadow-xl">
+                        <h3 class="text-6xl font-bold">13</h3>
+                        <p class="mt-2 font-semibold">Conscious Creators</p>
+                        <p class="mt-2 text-sm text-slate-400">Of the 40 brands analyzed, a third are primarily focused on sustainability, using ethical sourcing and 'slow fashion' principles.</p>
+                    </div>
+                    <div class="stat-card p-6 bg-slate-800 rounded-2xl shadow-xl">
+                        <h3 class="text-6xl font-bold">2018</h3>
+                        <p class="mt-2 font-semibold">A Year of Change</p>
+                        <p class="mt-2 text-sm text-slate-400">'Elexiay' and 'Kkerelé' were founded, signaling a new wave of brands embedding sustainability into their core identity from day one.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="fusion" class="p-8 bg-slate-800 rounded-2xl shadow-2xl">
+                 <h2 class="text-3xl font-bold text-center mb-2">The Fusion Formula</h2>
+                 <p class="text-center text-slate-400 mb-8">Nigerian designers masterfully weave tradition into trend, creating a globally resonant aesthetic.</p>
+                 <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                     <div class="text-center p-6 bg-slate-700 rounded-lg">
+                         <p class="font-bold text-lg text-amber-400">Heritage</p>
+                         <p class="text-sm">Indigenous Fabrics <br>(Adire, Aso Oke)</p>
+                     </div>
+                     <div class="flow-arrow transform md:-translate-y-2 rotate-90 md:rotate-0">&rarr;</div>
+                     <div class="text-center p-6 bg-slate-700 rounded-lg">
+                         <p class="font-bold text-lg text-pink-400">Craftsmanship</p>
+                         <p class="text-sm">Traditional Techniques <br>(Hand-Dyeing, Weaving)</p>
+                     </div>
+                     <div class="flow-arrow transform md:-translate-y-2 rotate-90 md:rotate-0">&rarr;</div>
+                     <div class="text-center p-6 bg-slate-700 rounded-lg">
+                         <p class="font-bold text-lg text-blue-400">Innovation</p>
+                         <p class="text-sm">Contemporary Silhouettes<br>& Global Aesthetics</p>
+                     </div>
+                      <div class="flow-arrow transform md:-translate-y-2 rotate-90 md:rotate-0">&rarr;</div>
+                      <div class="text-center p-6 bg-slate-700 rounded-lg">
+                         <p class="font-bold text-lg text-green-400">Impact</p>
+                         <p class="text-sm">Unique, Culturally Rich<br>Global Fashion</p>
+                     </div>
+                 </div>
+                 <p class="text-center mt-8 text-slate-300 max-w-2xl mx-auto">This process is not just about design; it's a form of cultural storytelling that prevents Nigerian fashion from being siloed as "ethnic," establishing it instead as a significant contributor to the global luxury and contemporary markets.</p>
+            </section>
+
+            <section id="streetwear">
+                <h2 class="text-3xl font-bold text-center mb-8">The Rise of Streetwear & Ready-to-Wear</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 bg-slate-800 rounded-2xl shadow-2xl">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-semibold mb-4 text-amber-400">Shaping Urban Culture</h3>
+                        <p class="text-slate-300 mb-4">
+                            Streetwear has exploded in Nigeria, becoming a powerful medium for youthful expression and cultural commentary. Brands like WAFFLESNCREAM and VIVENDII are not just selling clothes; they are building communities and subcultures. Similarly, the ready-to-wear sector has matured, offering accessible, stylish fashion for a broader audience.
+                        </p>
+                        <p class="text-slate-400 text-sm">
+                            The bar chart highlights the significant number of rising brands dedicated to streetwear and RTW, indicating a market diversification crucial for long-term growth and mainstream appeal.
+                        </p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="segmentComparisonChart"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="timeline">
+                 <h2 class="text-3xl font-bold text-center mb-8">Acceleration of a Movement</h2>
+                 <p class="text-center text-slate-400 mb-8 max-w-3xl mx-auto">While roots run deep, the founding dates of these 40 rising brands show a dramatic acceleration in the last decade, peaking between 2018 and the present. This trend highlights a recent surge in entrepreneurial activity and creative confidence within the Nigerian fashion industry.</p>
+                 <div class="p-8 bg-slate-800 rounded-2xl shadow-2xl">
+                    <div class="chart-container h-96 max-h-[450px]">
+                        <canvas id="foundingYearTrendChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-slate-700">
+            <p class="text-slate-400">Nigeria's fashion industry is not just on the rise; it's here, setting trends and shaping the future of global style.</p>
+            <p class="text-xs text-slate-500 mt-4">Infographic generated based on the report "The Ascendant Force: Nigeria's Fashion Renaissance".</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength = 16) => {
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const chartJsDefaults = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#cbd5e1',
+                        font: { size: 12 }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                    border: { color: '#475569' }
+                },
+                x: {
+                    ticks: { color: '#94a3b8' },
+                    grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                    border: { color: '#475569' }
+                }
+            },
+            maintainAspectRatio: false,
+            responsive: true
+        };
+        
+        const palette = {
+            orange: '#FF5733',
+            green: '#33FF57',
+            blue: '#3357FF',
+            pink: '#FF33A1',
+            yellow: '#F1C40F'
+        };
+
+
+        const categoryData = {
+            'Sustainable & Conscious': 13,
+            'Streetwear & Urban': 11,
+            'Modern Luxury & RTW': 9,
+            'Artisanal & Bespoke': 5,
+            'Emerging Talent': 1 
+        };
+        new Chart(document.getElementById('categoryDistributionChart'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(categoryData).map(label => wrapLabel(label)),
+                datasets: [{
+                    label: 'Brands by Category',
+                    data: Object.values(categoryData),
+                    backgroundColor: [palette.green, palette.blue, palette.pink, palette.orange, palette.yellow],
+                    borderColor: '#1a202c',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: { ...chartJsDefaults,
+                plugins: {
+                    legend: { position: 'right', labels: { color: '#cbd5e1', font: { size: 12 } } },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        
+        new Chart(document.getElementById('segmentComparisonChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(categoryData).map(label => wrapLabel(label)),
+                datasets: [{
+                    label: '# of Brands',
+                    data: Object.values(categoryData),
+                    backgroundColor: [palette.green, palette.blue, palette.pink, palette.orange, palette.yellow],
+                    borderColor: [palette.green, palette.blue, palette.pink, palette.orange, palette.yellow],
+                    borderWidth: 1
+                }]
+            },
+            options: { ...chartJsDefaults,
+                indexAxis: 'y',
+                plugins: { legend: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } } },
+            }
+        });
+        
+        const foundingYears = [
+            2018, 2018, 2013, 2016, 2025, 2012, 2012, 2015, 2018, 2018, 2006, 2018, 2013, 2017, 2011, 2019, 2021, 2018
+        ];
+        
+        const yearCounts = foundingYears.reduce((acc, year) => {
+            if(year <= 2025) { 
+                acc[year] = (acc[year] || 0) + 1;
+            }
+            return acc;
+        }, {});
+        
+        const sortedYears = Object.keys(yearCounts).sort((a, b) => a - b);
+        
+        new Chart(document.getElementById('foundingYearTrendChart'), {
+            type: 'line',
+            data: {
+                labels: sortedYears,
+                datasets: [{
+                    label: 'Number of Brands Founded',
+                    data: sortedYears.map(year => yearCounts[year]),
+                    fill: true,
+                    backgroundColor: 'rgba(51, 255, 87, 0.2)',
+                    borderColor: palette.green,
+                    tension: 0.3,
+                    pointBackgroundColor: palette.green,
+                    pointRadius: 5,
+                    pointHoverRadius: 8
+                }]
+            },
+            options: {
+                ...chartJsDefaults,
+                 plugins: { legend: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } } },
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1, color: '#94a3b8' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        border: { color: '#475569' }
+                    },
+                    x: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                        border: { color: '#475569' }
+                    }
+                 }
+            }
+        });
+    </script>
+</body>
+</html>
